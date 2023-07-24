@@ -16,4 +16,4 @@
     become : yes
     become_user : root
   - name: Deploy Docker Container
-    command: docker run -itd -p 8089:8081 shifakousar/insureme2:1.0
+    command: docker run -itd -p 8089:8081 shifakousar/insureme3:1.0
