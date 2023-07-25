@@ -41,14 +41,14 @@ node{
     
     stage('Containerize the application'){
         echo 'Creating Docker image'
-        sh "${dockerCMD} build -t shubhamkushwah123/insure-me:${tagName} ."
+        sh "${dockerCMD} build -t shifakousar/insureme3:1.0 ."
     }
     
     stage('Pushing it ot the DockerHub'){
         echo 'Pushing the docker image to DockerHub'
         withCredentials([string(credentialsId: 'dock-password', variable: 'dockerHubPassword')]) {
-        sh "${dockerCMD} login -u shubhamkushwah123 -p ${dockerHubPassword}"
-        sh "${dockerCMD} push shubhamkushwah123/insure-me:${tagName}"
+        sh "${dockerCMD} login -u shifakousar -p Docker@6776 "
+        sh "${dockerCMD} push shifakousar/insureme3:1.0"
             
         }
         
