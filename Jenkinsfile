@@ -18,7 +18,7 @@ node{
     stage('git code checkout'){
         try{
             echo 'checkout the code from git repository'
-            git 'https://github.com/shubhamkushwah123/star-agile-insurance-project.git'
+            https://github.com/shifasiraj67/insureme-project.git
         }
         catch(Exception e){
             echo 'Exception occured in Git Code Checkout Stage'
@@ -36,7 +36,7 @@ node{
     }
     
     stage('publish test reports'){
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Capstone-Project-Live-Demo/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/insureme/target/surefire-reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
     }
     
     stage('Containerize the application'){
